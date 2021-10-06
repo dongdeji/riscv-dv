@@ -1,7 +1,7 @@
-export RISCV_GCC=/usr/local/riscv/tool_chain/bin/riscv64-unknown-elf-gcc
-export RISCV_OBJCOPY=/usr/local/riscv/tool_chain/bin/riscv64-unknown-elf-objcopy
-export SPIKE_PATH=/usr/local/riscv/tool_chain/bin
+export RISCV_GCC=$RISCV/bin/riscv64-unknown-elf-gcc
+export RISCV_OBJCOPY=$RISCV/bin/riscv64-unknown-elf-objcopy
+export SPIKE_PATH=$RISCV/bin
 
 
-python3 run.py --test=riscv_arithmetick_basic_test --simulator questa --target rv64imc --iss=spike,emulator --iss_timeout 30
-python3 run.py --test=riscv_arithmetick_basic_test --simulator questa --custom_target rv64i --isa rv64i --mabi lp64 --iss=spike,emulator --iss_timeout 30
+python3 run.py --test=riscv_arithmetic_basic_test --simulator questa --target rv64imc --iss=spike,emulator --iss_timeout 30
+python3 run.py --test=riscv_arithmetic_basic_test --simulator questa --custom_target rv64i --isa rv64i --mabi lp64 --iss=spike,emulator --iss_timeout 30
