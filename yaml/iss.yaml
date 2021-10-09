@@ -36,3 +36,9 @@
   path_var: WHISPER_ISS
   cmd: >
     <path_var> <elf> --log --xlen <xlen> --isa <variant>
+    
+
+- iss: emulator
+  path_var: EMULATOR
+  cmd: >
+    <path_var>/simulator-rocket-debug +max-cycles=10000000 +verbose <elf> 3>&1 1>&2 2>&3 | /opt/riscv/bin/spike-dasm
